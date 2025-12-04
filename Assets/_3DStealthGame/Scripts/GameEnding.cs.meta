@@ -1,2 +1,16 @@
 fileFormatVersion: 2
 guid: f78143b0b992b2340b021381735e81a7
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - player: {fileID: 6304420233997208248, guid: 7e1ea998a97b5b5409e5899975a06fb7,
+      type: 3}
+  - uiDocument: {instanceID: 0}
+  - exitAudio: {instanceID: 0}
+  - caughtAudio: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

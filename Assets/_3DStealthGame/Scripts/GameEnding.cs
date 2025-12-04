@@ -42,7 +42,7 @@ public class GameEnding : MonoBehaviour
     {
         if (m_IsPlayerAtExit)
         {
-            EndLevel(m_EndScreen, false, exitAudio);
+            EndLevel(m_EndScreen, true, exitAudio);
         }
         else if (m_IsPlayerCaught)
         {

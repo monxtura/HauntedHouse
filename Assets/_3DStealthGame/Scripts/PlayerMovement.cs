@@ -5,12 +5,15 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    Animator m_Animator;
+    
     // Remove the three dots - either add your actual fields here or leave blank
 
     public InputAction MoveAction;
-    public float walkSpeed = 1.0f;
+
+    public float walkSpeed = 1.5f;
     public float turnSpeed = 20f;
+
+    Animator m_Animator;
     Rigidbody m_Rigidbody;
     Vector3 m_Movement;
     Quaternion m_Rotation = Quaternion.identity;
@@ -18,8 +21,8 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         m_Rigidbody = GetComponent<Rigidbody>();
-        MoveAction.Enable();
         m_Animator = GetComponent<Animator>();
+        MoveAction.Enable();
     }
 
     void FixedUpdate()

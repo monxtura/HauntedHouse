@@ -6,6 +6,7 @@ public class Observer : MonoBehaviour
 {
     public Transform player;
     public GameEnding gameEnding;
+
     bool m_IsPlayerInRange;
 
     void OnTriggerEnter(Collider other)
@@ -24,21 +25,21 @@ public class Observer : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        if (m_IsPlayerInRange)
+    void Update ()
         {
-            Vector3 direction = player.position - transform.position + Vector3.up;
-            Ray ray = new Ray(transform.position, direction);
-            RaycastHit raycastHit;
-
-            if (Physics.Raycast(ray, out raycastHit))
+            if (m_IsPlayerInRange)
             {
-                if (raycastHit.collider.transform == player)
+                Vector3 direction = player.position - transform.position + Vector3.up;
+                Ray ray = new Ray(transform.position, direction);
+                RaycastHit raycastHit;
+            
+                if (Physics.Raycast (ray, out raycastHit))
                 {
-                   gameEnding.CaughtPlayer();
+                    if (raycastHit.collider.transform == player)
+                    {
+                        gameEnding.CaughtPlayer ();
+                    }
                 }
             }
         }
     }
-}
